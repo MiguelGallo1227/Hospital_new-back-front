@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultório - Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestão de Consultório</h1>
+        </header>
+
+        <!-- Formulários de Cadastro -->
+        <section id="form-section">
+            <div class="form-container">
+                <h2>Cadastrar Médico</h2>
+                <form id="medico-form">
+                    <label for="nomeMedico">Nome do Médico</label>
+                    <input type="text" id="nomeMedico" required>
+                    <label for="especialidadeMedico">Especialidade</label>
+                    <input type="text" id="especialidadeMedico" required>
+                    <button type="submit">Cadastrar Médico</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2>Cadastrar Paciente</h2>
+                <form id="paciente-form">
+                    <label for="nomePaciente">Nome do Paciente</label>
+                    <input type="text" id="nomePaciente" required>
+                    <label for="emailPaciente">E-mail do Paciente</label>
+                    <input type="email" id="emailPaciente" required>
+                    <button type="submit">Cadastrar Paciente</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2>Cadastrar Consulta</h2>
+                <form id="consulta-form">
+                    <label for="dataHoraConsulta">Data e Hora</label>
+                    <input type="datetime-local" id="dataHoraConsulta" required>
+                    
+                    <label for="tipoConsulta">Tipo de Consulta</label>
+                    <input type="text" id="tipoConsulta" required>
+                
+                    <label for="medicoConsulta">Médico</label>
+                    <select id="medicoConsulta" required>
+                        <!-- Médicos serão carregados aqui -->
+                    </select>
+                
+                    <label for="pacienteConsulta">Paciente</label>
+                    <select id="pacienteConsulta" required>
+                        <!-- Pacientes serão carregados aqui -->
+                    </select>
+                
+                    <button type="submit">Cadastrar Consulta</button>
+                </form>
+                
+            </div>
+        </section>
+
+        <!-- Exibição de Dados -->
+        <section id="list-section">
+            <div class="list-container">
+                <h2>Lista de Médicos</h2>
+                <ul id="medico-list"></ul>
+            </div>
+            <div class="list-container">
+                <h2>Lista de Pacientes</h2>
+                <ul id="paciente-list"></ul>
+            </div>
+            <div class="list-container">
+                <h2>Lista de Consultas</h2>
+                <ul id="consulta-list"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
